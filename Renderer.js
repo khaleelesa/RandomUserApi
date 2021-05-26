@@ -24,7 +24,7 @@ class Renderer {
         const source = $('#quote-template').html();
         const template = Handlebars.compile(source);
         $(".quote-container").empty()
-        let newHTML = template({ quotedata });
+        let newHTML = template(quotedata);
         $(".quote-container").append(newHTML);
     }
 
@@ -34,7 +34,7 @@ class Renderer {
         const template = Handlebars.compile(source);
         $(".pokemon-container").empty()
         let newHTML = template({ pokidata });
-        $(".pokemon-container").append(newHTML);
+        $("#pokemon-container").append(newHTML);
     }
 
     renderAboutMe() {
