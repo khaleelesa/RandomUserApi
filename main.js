@@ -1,4 +1,5 @@
 const userTest = new APIManager()
+const rendTest = new Renderer(userTest.allData)
 
 $(".container").on("click", "#load", function() {
 
@@ -12,7 +13,7 @@ $(".container").on("click", "#load", function() {
 })
 
 $(".container").on("click", "#display", function() {
-    const rendTest = new Renderer(userTest.allData)
+
     rendTest.renderUser()
     rendTest.renderFriends()
     rendTest.renderQuote()
